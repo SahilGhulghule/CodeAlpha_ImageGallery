@@ -1,0 +1,51 @@
+<html>
+<link rel="stylesheet" href="style.css">
+<body>
+<div class="app-container">
+    <header>
+        <h1>NEON <span class="highlight">GALLERY</span></h1>
+        <p>Explore 20 Digital Perspectives</p>
+    </header>
+    
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterGallery('all')">View All</button>
+        <button class="filter-btn" onclick="filterGallery('nature')">Bio-Dome</button>
+        <button class="filter-btn" onclick="filterGallery('city')">Cyber-City</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <div class="gallery-item nature" onclick="openLightbox(0)"><img src="https://picsum.photos/id/10/400/300" alt="N1"><div class="item-overlay"><span>Forest</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(1)"><img src="https://picsum.photos/id/11/400/300" alt="N2"><div class="item-overlay"><span>Lake</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(2)"><img src="https://picsum.photos/id/12/400/300" alt="N3"><div class="item-overlay"><span>Peak</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(3)"><img src="https://picsum.photos/id/13/400/300" alt="N4"><div class="item-overlay"><span>River</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(4)"><img src="https://picsum.photos/id/14/400/300" alt="N5"><div class="item-overlay"><span>Coast</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(5)"><img src="https://picsum.photos/id/15/400/300" alt="N6"><div class="item-overlay"><span>Trail</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(6)"><img src="https://picsum.photos/id/16/400/300" alt="N7"><div class="item-overlay"><span>Cave</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(7)"><img src="https://picsum.photos/id/17/400/300" alt="N8"><div class="item-overlay"><span>Fall</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(8)"><img src="https://picsum.photos/id/18/400/300" alt="N9"><div class="item-overlay"><span>Meadow</span></div></div>
+        <div class="gallery-item nature" onclick="openLightbox(9)"><img src="https://picsum.photos/id/19/400/300" alt="N10"><div class="item-overlay"><span>Pond</span></div></div>
+
+        <div class="gallery-item city" onclick="openLightbox(10)"><img src="https://picsum.photos/id/103/400/300" alt="C1"><div class="item-overlay"><span>District</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(11)"><img src="https://picsum.photos/id/122/400/300" alt="C2"><div class="item-overlay"><span>Neon</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(12)"><img src="https://picsum.photos/id/125/400/300" alt="C3"><div class="item-overlay"><span>Plaza</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(13)"><img src="https://picsum.photos/id/133/400/300" alt="C4"><div class="item-overlay"><span>Alley</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(14)"><img src="https://picsum.photos/id/142/400/300" alt="C5"><div class="item-overlay"><span>Hub</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(15)"><img src="https://picsum.photos/id/145/400/300" alt="C6"><div class="item-overlay"><span>Metro</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(16)"><img src="https://picsum.photos/id/158/400/300" alt="C7"><div class="item-overlay"><span>Port</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(17)"><img src="https://picsum.photos/id/164/400/300" alt="C8"><div class="item-overlay"><span>Tower</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(18)"><img src="https://picsum.photos/id/180/400/300" alt="C9"><div class="item-overlay"><span>Station</span></div></div>
+        <div class="gallery-item city" onclick="openLightbox(19)"><img src="https://picsum.photos/id/192/400/300" alt="C10"><div class="item-overlay"><span>Core</span></div></div>
+    </div>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <button class="nav-btn prev" onclick="event.stopPropagation(); changeImage(-1)">&#10094;</button>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    <button class="nav-btn next" onclick="event.stopPropagation(); changeImage(1)">&#10095;</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
